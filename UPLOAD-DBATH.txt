@@ -1,0 +1,1 @@
+압축을 푼 뒤 보이는 dbath 폴더와 안내 파일 전체를 GitHub 저장소 최상위 Upload files 화면에 한 번에 드래그하세요.
