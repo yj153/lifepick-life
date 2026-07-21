@@ -172,3 +172,61 @@
   .mobile-bar em{font-size:12px}
   .mobile-cta{font-size:13px}
 }
+
+
+/* 2026-07-22 product labels and variable-condition notice */
+.product-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  background: #f3f4f6;
+  color: #111827;
+}
+.product-badge.sale {
+  background: #fff1f2;
+  color: #e11d48;
+  border: 1px solid #fecdd3;
+}
+.product-badge.fast {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+.product-badge.brand {
+  background: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+}
+.product-badge.value {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #bbf7d0;
+}
+.product-badge.direct {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+.notice-small {
+  margin: 0 0 26px;
+  padding: 0;
+  background: transparent;
+  color: #475569;
+  font-size: 19px;
+  line-height: 1.55;
+  text-align: left;
+  word-break: keep-all;
+}
+
+@media(max-width:860px){
+  .notice-small{font-size:17px;margin-bottom:22px}
+}
