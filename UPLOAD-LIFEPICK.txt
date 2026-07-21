@@ -1,0 +1,9 @@
+압축을 풀면 index.html, styles.css, script.js, assets, privacy, terms, favicon.svg, CNAME 등이 바로 보입니다.
+
+위 항목 전체를 GitHub 저장소 최상위의 Add file → Upload files 화면에 한 번에 드래그하세요.
+
+GitHub Pages 설정:
+Source: Deploy from a branch
+Branch: main
+Folder: /(root)
+Custom domain: lifepick.life
