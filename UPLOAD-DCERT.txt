@@ -1,0 +1,9 @@
+업로드 방법
+
+1. 이 ZIP 파일을 압축 해제합니다.
+2. 압축을 풀면 보이는 dcert 폴더와 안내문 파일 전체를 선택합니다.
+3. GitHub 저장소 최상위의 Upload files 화면에 한 번에 드래그합니다.
+4. Commit changes를 누릅니다.
+
+실제 페이지 주소
+https://lifepick.life/dcert/

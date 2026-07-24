@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="자격증 70여 종 무료수강 상담과 다양한 자격증 과정을 검색하고 확인하세요.">
+  <title>라이프픽 | 자격증 70여 종 검색</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark">L</span>
+      <span><strong>LifePick.life</strong><small>자격증·교육과정 정보</small></span>
+    </a>
+    <a class="header-jump" href="#certificate-search"><span>관심 자격증 70여 종</span><strong>검색하기 →</strong></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">주부·직장인·재취업 관심과정</span>
+        <h1>관심 자격증 <em>70여 종</em>을 검색해보세요</h1>
+        <p>무료수강 자격증부터 심리·아동·교육·돌봄·취업·전문 과정까지 관심 분야를 검색하고 해당 과정의 상담신청 페이지를 바로 확인할 수 있습니다.</p>
+      </div>
+
+      <div id="certificate-search" class="search-panel">
+        <label class="sr-only" for="searchInput">자격증 검색</label>
+        <div class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="예: 심리상담사 아동 간병사 탐정 돌봄 플로리스트">
+          <button id="clearSearch" type="button">지우기</button>
+        </div>
+        <div class="filter-row" id="filters">
+          <button class="filter active" data-filter="all">전체</button>
+          <button class="filter" data-filter="instant">무료수강 인기</button>
+          <button class="filter" data-filter="psychology">심리·상담</button>
+          <button class="filter" data-filter="child">아동·교육</button>
+          <button class="filter" data-filter="care">돌봄·복지</button>
+          <button class="filter" data-filter="career">취업·실무</button>
+          <button class="filter" data-filter="health">생활·건강</button>
+          <button class="filter" data-filter="creative">취미·창작</button>
+          <button class="filter" data-filter="investigation">탐정·조사</button>
+        </div>
+        <div class="search-status" id="searchStatus" aria-live="polite"></div>
+      </div>
+
+      <div class="affiliate-strip"><div class="wrap">이 페이지는 네이버 쇼핑 커넥트, 쿠팡 파트너스, 토스쇼핑 쉐어링크 등 제휴마케팅 활동의 일환으로, 판매 발생 시 이에 따른 일정액의 수수료를 제공받습니다.</div></div>
+    </div>
+  </section>
+
+  <section class="courses-section" id="course-results">
+    <div class="wrap content-with-sidebar">
+      <div class="course-content">
+        <section class="course-group" id="instantSection">
+          <div class="group-heading">
+            <span class="eyebrow">바로 확인하기</span>
+            <h2>인기 무료수강 자격증 과정</h2>
+            <p>대표 이미지를 눌러 관심 과정의 상담신청 페이지를 바로 확인하세요.</p>
+          </div>
+          <div class="course-grid featured-grid" id="instantGrid"></div>
+        </section>
+
+        <section class="course-group" id="prioritySection">
+          <div class="group-heading spaced">
+            <span class="eyebrow">취업·돌봄·전문 분야</span>
+            <h2>우선 추천 자격증 과정</h2>
+            <p>교육비와 수강조건은 각 과정의 신청페이지에서 확인하세요.</p>
+          </div>
+          <div class="course-grid" id="priorityGrid"></div>
+        </section>
+
+        <section class="course-group" id="allSection">
+          <div class="group-heading spaced">
+            <span class="eyebrow">전체 과정</span>
+            <h2>분야별 자격증 과정 모두 보기</h2>
+            <p>검색창에 ‘탐정’, ‘노인’, ‘심리’, ‘아동’, ‘돌봄’처럼 입력해도 관련 과정이 함께 표시됩니다.</p>
+          </div>
+          <div class="course-grid all-courses collapsed" id="allGrid"></div>
+          <button class="expand-btn" id="expandBtn" type="button">전체 자격증 과정 펼쳐보기 ↓</button>
+        </section>
+
+        <section class="faq">
+          <div class="group-heading">
+            <span class="eyebrow">자주 묻는 질문</span>
+            <h2>신청 전 확인하세요</h2>
+          </div>
+          <details>
+            <summary>‘탐정’으로 검색해도 나오나요?</summary>
+            <p>사설탐정사와 PIA 민간조사사가 함께 검색되도록 과정명, 설명, 연관키워드를 함께 검색합니다.</p>
+          </details>
+          <details>
+            <summary>모든 과정이 무료수강인가요?</summary>
+            <p>70여 종 통합 무료수강 상담과 무료수강으로 안내된 과정은 신청페이지에서 조건을 확인할 수 있습니다. 돌봄·병원동행·간병·전문 과정 등은 교육비와 지원조건이 다를 수 있습니다.</p>
+          </details>
+        </section>
+      </div>
+
+      <aside class="desktop-sticky">
+        <a class="sticky-card sticky-cpa" href="https://gadlldws.adpt.kr" target="_blank" rel="sponsored noopener noreferrer">
+          <img src="assets/free-70.jpg" alt="자격증 70여 종 무료수강 대표 이미지">
+          <span>무료수강</span>
+          <strong>자격증 70여 종</strong>
+          <p>관심 과정을 한 번에 확인하세요.</p>
+          <b>상담신청하기 →</b>
+        </a>
+        <a class="sticky-card sticky-book" href="https://link.coupang.com/a/fDRicF1yLI" target="_blank" rel="sponsored noopener noreferrer">
+          <img src="assets/book-challenge.jpg" alt="야무진 자격증 챌린지 도서 표지">
+          <span>추천도서</span>
+          <strong>직장인 인생을 바꿀 자격증 도전</strong>
+          <p>야무진 자격증 챌린지의 내용과 구매후기를 확인하세요.</p>
+          <b>도서 확인하기 →</b>
+        </a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <strong>(주)허브153</strong> | 사업자등록번호 744-86-01480<br>
+    서울시 강남구 도곡로 112, 2층 비2-4호<br>
+    이메일 mil7bil@gmail.com<br>
+    <a href="privacy/">개인정보처리방침</a> | <a href="terms/">이용안내</a>
+  </div>
+</footer>
+
+<div class="mobile-bar" id="mobileBar">
+  <button class="bar-close" id="barClose">×</button>
+  <a class="mobile-cpa" href="https://gadlldws.adpt.kr" target="_blank" rel="sponsored noopener noreferrer"><strong>자격증 70여 종</strong><span>무료수강 상담신청 →</span></a>
+  <a class="mobile-book" href="https://link.coupang.com/a/fDRicF1yLI" target="_blank" rel="sponsored noopener noreferrer"><strong>야무진 자격증 챌린지</strong><span>책 내용·후기 보기 →</span></a>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

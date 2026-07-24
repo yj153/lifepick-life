@@ -1,0 +1,12 @@
+GitHub 저장소 최상위 업로드 구조
+
+dcert/index.html
+dcert/styles.css
+dcert/script.js
+dcert/assets/
+dcert/privacy/
+dcert/terms/
+dcert/favicon.svg
+
+서브페이지 주소
+https://lifepick.life/dcert/
