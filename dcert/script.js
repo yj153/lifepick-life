@@ -37,7 +37,9 @@ const courseImages = {
   "부부심리상담사 자격증":"assets/course-36.jpg",
   "직무스트레스관리사 자격증":"assets/course-37.jpg",
   "산지식물자원관리사 자격증":"assets/course-38.jpg",
-  "발효효소관리사 자격증":"assets/course-39.jpg"
+  "발효효소관리사 자격증":"assets/course-39.jpg",
+  "색채심리상담사 자격증":"assets/course-40.jpg",
+  "노인심리상담사 자격증 일반과정":"assets/course-41.jpg"
 };
 
 const courses = [
@@ -56,6 +58,7 @@ const courses = [
   {name:'가베지도사 자격증',image:'assets/course-14.jpg',url:'https://radlldyw.adpt.kr',group:'instant',cat:'child',tag:'무료수강 과정',desc:'놀이교구를 활용한 아동 교육에 관심 있는 분을 위한 과정입니다.',cta:'가베지도사 자격증 과정 보기 →',keywords:'가베 교구 놀이 아동 유아 교육 가베지도사 자격증'},
   {name:'마케팅기획전문가 자격증',image:'assets/course-15.jpg',url:'https://codlldym.adpt.kr',group:'instant',cat:'career',tag:'무료수강 과정',desc:'마케팅 기획과 실무 역량에 관심 있는 분이 확인하기 좋은 과정입니다.',cta:'마케팅기획전문가 자격증 과정 확인하기 →',keywords:'마케팅 광고 기획 홍보 실무 취업 마케팅기획전문가 자격증'},
   {name:'한국사 지도사 자격증',image:'assets/course-16.jpg',url:'https://cedlldwy.adpt.kr',group:'instant',cat:'child career',tag:'무료수강 과정',desc:'한국 관련 교육과 지도 분야에 관심 있는 분이 확인할 수 있는 과정입니다.',cta:'한국사 지도사 자격증 과정 확인하기 →',keywords:'한국사 지도사 한국사지도사 한국지도사 역사 교육 강사 자격증'},
+  {name:'색채심리상담사 자격증',image:'assets/course-40.jpg',url:'https://xudllmbb.adpt.kr',group:'instant',cat:'psychology creative',tag:'무료수강 과정',desc:'색채와 심리상담 분야에 관심 있는 분이 확인할 수 있는 과정입니다.',cta:'색채심리상담사 자격증 과정 확인하기 →',keywords:'색채심리상담사 색채 컬러 색상 심리 상담 미술 자격증'},
 
   {name:'간병사 자격증',url:'https://todllmbh.adpt.kr',group:'priority',cat:'care career',tag:'돌봄·취업 추천',desc:'간병과 환자 돌봄 분야의 교육과 준비조건을 확인해보세요.',cta:'교육과정과 수강조건 보기 →',keywords:'간병 간병인 병원 환자 돌봄 취업 재취업'},
   {name:'노인돌봄 생활지원사 자격증',url:'https://x3euftgsll.sens.kr',group:'priority',cat:'care career',tag:'돌봄·취업 추천',desc:'노인 돌봄과 생활지원 분야에 관심 있는 분이 확인할 수 있는 과정입니다.',cta:'과정 및 지원조건 확인하기 →',keywords:'노인 어르신 시니어 돌봄 생활지원사 복지 취업 재취업'},
@@ -76,6 +79,7 @@ const courses = [
   {name:'체형관리사 자격증',url:'https://podllmds.adpt.kr',group:'all',cat:'health career',tag:'생활·건강',desc:'체형과 생활관리 분야에 관심 있는 분이 확인할 수 있는 과정입니다.',cta:'체형관리 과정 보기 →',keywords:'체형 몸매 자세 건강 관리 다이어트'},
   {name:'유치원행정실무사 자격증',url:'https://godllmdl.adpt.kr',group:'all',cat:'child career',tag:'아동·교육',desc:'유치원 행정과 교육기관 실무에 관심 있는 분을 위한 과정입니다.',cta:'행정실무 과정 확인하기 →',keywords:'유치원 어린이집 행정 실무 교육 취업 재취업'},
   {name:'심리상담사 자격증',url:'https://zedllmdn.adpt.kr',group:'all',cat:'psychology',tag:'심리·상담',desc:'심리상담 분야의 별도 과정과 수강조건을 확인할 수 있습니다.',cta:'전문과정 상세 보기 →',keywords:'심리 상담 심리상담사 마음 멘탈'},
+  {name:'노인심리상담사 자격증 일반과정',image:'assets/course-41.jpg',url:'https://kadllmdh.adpt.kr',group:'all',cat:'psychology care',tag:'심리·상담',desc:'노년기 심리상담 분야의 별도 과정과 수강조건을 확인할 수 있습니다.',cta:'노인심리상담사 과정 확인하기 →',keywords:'노인심리상담사 일반과정 노인 어르신 시니어 심리 상담 복지 자격증'},
   {name:'노인미술심리상담사 자격증',url:'https://vidllmdq.adpt.kr',group:'all',cat:'psychology care creative',tag:'심리·상담',desc:'노년층 대상 미술활동과 심리상담에 관심 있는 분을 위한 과정입니다.',cta:'교육과정 확인하기 →',keywords:'노인 어르신 시니어 미술 심리 상담 그림 돌봄'},
   {name:'부부심리상담사 자격증',url:'https://zodllmdw.adpt.kr',group:'all',cat:'psychology',tag:'심리·상담',desc:'부부관계와 심리상담 분야에 관심 있는 분이 확인할 수 있는 과정입니다.',cta:'부부상담 과정 보기 →',keywords:'부부 결혼 관계 가족 심리 상담'},
   {name:'직무스트레스관리사 자격증',url:'https://kedllmdy.adpt.kr',group:'all',cat:'psychology career health',tag:'취업·실무',desc:'직장인의 스트레스와 조직생활 관리 분야에 관심 있는 분을 위한 과정입니다.',cta:'과정 및 조건 확인하기 →',keywords:'직무 스트레스 직장 회사 조직 심리 관리'},
