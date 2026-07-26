@@ -8,3 +8,7 @@ DKCC FINAL V4 검증 완료
 - CPA 링크 2개 / CPS 링크 12개 존재
 - PC 우측 고정 / 모바일 하단 고정 및 닫기 버튼 존재
 - dkcc 내부 CNAME 없음
+
+CPA link correction verified:
+- KCC 맞춤주방: https://www.albarich.com/pt/TA7hdOQDW5
+- KCC글라스 창호: https://www.albarich.com/pt/yBhcGEXdKB
