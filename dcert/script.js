@@ -39,7 +39,8 @@ const courseImages = {
   "산지식물자원관리사 자격증":"assets/course-38.jpg",
   "발효효소관리사 자격증":"assets/course-39.jpg",
   "색채심리상담사 자격증":"assets/course-40.jpg",
-  "노인심리상담사 자격증 일반과정":"assets/course-41.jpg"
+  "노인심리상담사 자격증 일반과정":"assets/course-41.jpg",
+  "프리다이빙 자격증 과정":"assets/freediving-course.jpg"
 };
 
 const courses = [
@@ -60,15 +61,16 @@ const courses = [
   {name:'한국사 지도사 자격증',image:'assets/course-16.jpg',url:'https://cedlldwy.adpt.kr',group:'instant',cat:'child career',tag:'무료수강 과정',desc:'한국 관련 교육과 지도 분야에 관심 있는 분이 확인할 수 있는 과정입니다.',cta:'한국사 지도사 자격증 과정 확인하기 →',keywords:'한국사 지도사 한국사지도사 한국지도사 역사 교육 강사 자격증'},
   {name:'색채심리상담사 자격증',image:'assets/course-40.jpg',url:'https://xudllmbb.adpt.kr',group:'instant',cat:'psychology creative',tag:'무료수강 과정',desc:'색채와 심리상담 분야에 관심 있는 분이 확인할 수 있는 과정입니다.',cta:'색채심리상담사 자격증 과정 확인하기 →',keywords:'색채심리상담사 색채 컬러 색상 심리 상담 미술 자격증'},
 
-  {name:'간병사 자격증',url:'https://todllmbh.adpt.kr',group:'priority',cat:'care career',tag:'돌봄·취업 추천',desc:'간병과 환자 돌봄 분야의 교육과 준비조건을 확인해보세요.',cta:'교육과정과 수강조건 보기 →',keywords:'간병 간병인 병원 환자 돌봄 취업 재취업'},
   {name:'노인돌봄 생활지원사 자격증',url:'https://x3euftgsll.sens.kr',group:'priority',cat:'care career',tag:'돌봄·취업 추천',desc:'노인 돌봄과 생활지원 분야에 관심 있는 분이 확인할 수 있는 과정입니다.',cta:'과정 및 지원조건 확인하기 →',keywords:'노인 어르신 시니어 돌봄 생활지원사 복지 취업 재취업'},
   {name:'병원동행매니저 자격증',url:'https://x2euwea8c2.sens.kr',group:'priority',cat:'care career',tag:'돌봄·취업 추천',desc:'병원 이용 동행과 생활지원 분야의 과정 정보를 확인해보세요.',cta:'교육과정 자세히 보기 →',keywords:'병원 동행 매니저 환자 보호자 돌봄 취업 재취업'},
+  {name:'간병사 자격증',url:'https://todllmbh.adpt.kr',group:'priority',cat:'care career',tag:'돌봄·취업 추천',desc:'간병과 환자 돌봄 분야의 교육과 준비조건을 확인해보세요.',cta:'교육과정과 수강조건 보기 →',keywords:'간병 간병인 병원 환자 돌봄 취업 재취업'},
   {name:'아동심리상담사 자격증',url:'https://pudllmbm.adpt.kr',group:'priority',cat:'child psychology',tag:'전문과정 안내',desc:'아동심리와 상담 분야의 별도 과정 및 조건을 확인할 수 있습니다.',cta:'전문과정 상세 확인하기 →',keywords:'아동심리상담사 아동 아이 어린이 심리 상담'},
   {name:'사설탐정사 자격증',url:'https://gidllmbs.adpt.kr',group:'priority',cat:'investigation career',tag:'탐정·조사 추천',desc:'탐정과 민간조사 분야에 관심 있는 분이 확인할 수 있는 과정입니다.',cta:'탐정 과정 확인하기 →',keywords:'탐정 사설탐정 조사 민간조사 탐문 조사사 pia'},
-  {name:'고등·대학 검정고시',url:'https://kedllmbl.adpt.kr',group:'priority',cat:'career',tag:'학력·진학 과정',desc:'고등학교 검정고시와 대학 진학 준비 정보를 확인해보세요.',cta:'검정고시 과정 확인하기 →',keywords:'검정고시 고졸 대입 대학 진학 학력'},
-  {name:'타로 심리상담사 자격증',url:'https://gedllmbn.adpt.kr',group:'priority',cat:'psychology creative',tag:'심리·상담 추천',desc:'타로와 상담 분야를 함께 배우고 싶은 분이 확인할 수 있는 과정입니다.',cta:'타로상담 과정 확인하기 →',keywords:'타로 카드 점 심리 상담 취미'},
-  {name:'약용식물 자원관리사 자격증',url:'https://todllmbd.adpt.kr',group:'priority',cat:'health career',tag:'생활·전문 추천',desc:'약용식물과 식물자원 관리 분야에 관심 있는 분을 위한 과정입니다.',cta:'교육과정 확인하기 →',keywords:'약초 식물 약용 자원 산야초 건강'},
-  {name:'PIA민간조사사 자격증',url:'https://kodllmmm.adpt.kr',group:'priority',cat:'investigation career',tag:'탐정·조사 추천',desc:'민간조사와 탐정 분야의 교육과정 및 조건을 확인해보세요.',cta:'민간조사 과정 보기 →',keywords:'pia 민간조사 민간조사사 탐정 조사 사설탐정 탐문'},
+  {name:'프리다이빙 자격증 과정',image:'assets/freediving-course.jpg',url:'https://naver.me/5uloeQJe',group:'priority',cat:'creative career',tag:'취미·레저 추천',desc:'AIDA·PADI 레벨 1·2 강습 구성과 교육조건을 확인해보세요.',cta:'프리다이빙 교육과정 확인하기 →',keywords:'프리다이빙 다이빙 스쿠버 AIDA PADI 레저 수영 자격증 강습 교육'},
+  {name:'고등·대학 검정고시',url:'https://kedllmbl.adpt.kr',group:'all',cat:'career',tag:'학력·진학 과정',desc:'고등학교 검정고시와 대학 진학 준비 정보를 확인해보세요.',cta:'검정고시 과정 확인하기 →',keywords:'검정고시 고졸 대입 대학 진학 학력'},
+  {name:'타로 심리상담사 자격증',url:'https://gedllmbn.adpt.kr',group:'all',cat:'psychology creative',tag:'심리·상담 추천',desc:'타로와 상담 분야를 함께 배우고 싶은 분이 확인할 수 있는 과정입니다.',cta:'타로상담 과정 확인하기 →',keywords:'타로 카드 점 심리 상담 취미'},
+  {name:'약용식물 자원관리사 자격증',url:'https://todllmbd.adpt.kr',group:'all',cat:'health career',tag:'생활·전문 추천',desc:'약용식물과 식물자원 관리 분야에 관심 있는 분을 위한 과정입니다.',cta:'교육과정 확인하기 →',keywords:'약초 식물 약용 자원 산야초 건강'},
+  {name:'PIA민간조사사 자격증',url:'https://kodllmmm.adpt.kr',group:'all',cat:'investigation career',tag:'탐정·조사 추천',desc:'민간조사와 탐정 분야의 교육과정 및 조건을 확인해보세요.',cta:'민간조사 과정 보기 →',keywords:'pia 민간조사 민간조사사 탐정 조사 사설탐정 탐문'},
 
   {name:'푸드스타일리스트 자격증',url:'https://cedllmbq.adpt.kr',group:'all',cat:'creative career',tag:'취미·창작',desc:'음식 연출과 푸드 스타일링 분야에 관심 있는 분을 위한 과정입니다.',cta:'푸드스타일링 과정 보기 →',keywords:'푸드 음식 요리 스타일리스트 촬영 연출'},
   {name:'캐리커쳐 자격증',url:'https://xodllmbw.adpt.kr',group:'all',cat:'creative',tag:'취미·창작',desc:'인물의 특징을 살린 그림과 창작 활동에 관심 있는 분을 위한 과정입니다.',cta:'캐리커쳐 자격증 과정 보기 →',keywords:'캐리커쳐 캐리커처 그림 미술 인물화 캐릭터 취미 자격증'},
@@ -118,6 +120,7 @@ const status = document.getElementById('searchStatus');
 const expandBtn = document.getElementById('expandBtn');
 const allGrid = document.getElementById('allGrid');
 const resultAnchor = document.getElementById('course-results');
+const recommendSection = document.getElementById('recommendSection');
 const sections = {
   instant: document.getElementById('instantSection'),
   priority: document.getElementById('prioritySection'),
@@ -137,7 +140,10 @@ function expandTerms(query){
     '노인':['노인','어르신','시니어'],
     '심리':['심리','상담','멘탈'],
     '아동':['아동','아이','어린이'],
-    '병원':['병원','동행','간병','환자']
+    '병원':['병원','동행','간병','환자'],
+    '다이빙':['다이빙','프리다이빙','스쿠버','aida','padi'],
+    '면허':['면허','운전면허','필기시험','1종','2종'],
+    'mbti':['mbti','성격검사','성격유형','formm']
   };
   return base.map(term => synonyms[term] || [term]);
 }
@@ -158,14 +164,14 @@ function applyFilters({scroll=false}={}){
   const isFiltering = Boolean(query) || activeFilter !== 'all';
   let visible = 0;
 
-  document.querySelectorAll('.course-card').forEach(card => {
+  document.querySelectorAll('.course-card:not([data-static="true"])').forEach(card => {
     const searchable = `${card.dataset.name} ${card.dataset.keywords}`;
     const matchText = termGroups.length === 0 || termGroups.every(group => group.some(term => searchable.includes(term)));
     const matchCategory = activeFilter === 'all'
       ? true
       : activeFilter === 'instant'
         ? card.classList.contains('instant')
-        : card.dataset.cat.includes(activeFilter);
+        : card.dataset.cat.split(/\s+/).includes(activeFilter);
     const show = matchText && matchCategory;
     card.classList.toggle('hidden', !show);
     if(show) visible += 1;
@@ -183,6 +189,7 @@ function applyFilters({scroll=false}={}){
   }
 
   updateSectionVisibility(isFiltering);
+  if(recommendSection) recommendSection.classList.toggle('section-hidden', isFiltering);
   if(scroll) resultAnchor.scrollIntoView({behavior:'smooth', block:'start'});
 }
 
@@ -200,7 +207,7 @@ document.querySelectorAll('.filter').forEach(button => {
     document.querySelectorAll('.filter').forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
     activeFilter = button.dataset.filter;
-    if(activeFilter === 'all') input.value = '';
+    input.value = '';
     applyFilters({scroll:true});
   });
 });

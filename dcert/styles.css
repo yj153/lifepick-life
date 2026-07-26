@@ -177,3 +177,11 @@ a{text-decoration:none;color:inherit}
   padding:8px 10px;
   overflow:hidden;
 }
+
+
+/* Mid-page CPS recommendation cards */
+.recommendation-section{margin-top:8px}
+.recommendation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.recommendation-card .tag{background:#e9f6ff;color:#14658f}
+.recommendation-card b{background:var(--navy)}
+@media(max-width:560px){.recommendation-grid{grid-template-columns:1fr}}
