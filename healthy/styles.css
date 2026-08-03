@@ -72,3 +72,102 @@
   .visual-card>img.hero-kwangdong{object-fit:contain!important;background:#f7f4ed!important}
   .hero-sub{font-size:14px;margin-bottom:12px}
 }
+
+
+/* FINAL V3: clickable intro, gold BEST, navy article, image-led PC rail */
+html{scroll-behavior:smooth}
+.intro-section{padding:18px 0 14px!important}
+.health-intro-banner{min-height:60px;display:flex;align-items:center;justify-content:center;gap:10px 16px;padding:13px 20px;border-radius:14px;background:linear-gradient(110deg,#102f4d,#173f66);box-shadow:0 9px 22px rgba(16,47,77,.16);text-decoration:none;text-align:center;color:#fff;font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+.health-intro-banner .intro-main{font-size:20px;font-weight:900;letter-spacing:-.035em}
+.health-intro-banner .intro-sub{font-size:15px;font-weight:650;color:#bfe5ff}
+.health-intro-banner b{font-size:14px;font-weight:900;color:#332400;background:#f4d37a;padding:9px 12px;border-radius:9px;white-space:nowrap}
+.health-intro-banner:hover b{background:#ffd95f}
+.section-head>span{background:#c99a28!important;color:#211600!important;letter-spacing:.08em!important}
+.product-rank{background:#b9871f!important;color:#1f1500!important;border:1px solid rgba(255,255,255,.7);box-shadow:0 4px 10px rgba(80,54,0,.16)}
+.product-card.cps .product-btn{background:#176b78!important}
+.product-card.cps .product-btn:hover{background:#115762!important}
+.product-card.cpa .product-btn{background:#f58220!important}
+.product-card.cpa .product-btn:hover{background:#df6d0d!important}
+.info-banner{background:linear-gradient(110deg,#102f4d,#174f79)!important;box-shadow:0 12px 30px rgba(16,47,77,.22)!important}
+.info-banner-copy p{color:#cdeaff!important}
+.info-banner-copy em{color:#1b2c3c!important;background:#f4d37a!important}
+.today-logo b{color:#f4d37a!important}
+@media(min-width:901px){
+  .sticky-rail{width:285px!important}
+  .rail-image-card{padding:0!important;overflow:hidden!important;border-radius:18px!important;background:#fff!important;color:#fff!important}
+  .rail-image-card .rail-image{height:145px;background:#f6f3ec;overflow:hidden}
+  .rail-image-card .rail-image img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+  .rail-image-card.rent .rail-image{background:#f7f0f9}
+  .rail-image-card .rail-copy{padding:15px 17px 17px;background:linear-gradient(135deg,#17794c,#0d5d3a)}
+  .rail-image-card.rent .rail-copy{background:linear-gradient(135deg,#8754a7,#5f347d)}
+  .rail-image-card .rail-copy>span:first-child{font-size:14px!important;font-weight:900!important;line-height:1.35}
+  .rail-image-card .rail-copy strong{font-size:24px!important;margin:3px 0 5px!important}
+  .rail-image-card .rail-copy em{font-size:14px!important;line-height:1.45!important;margin:0 0 11px!important;opacity:.93}
+  .rail-image-card .rail-cta{display:block!important;background:#fff!important;color:#174f35!important;border-radius:9px!important;text-align:center!important;padding:10px!important;font-size:14px!important}
+  .rail-image-card.rent .rail-cta{color:#5f347d!important}
+}
+@media(max-width:760px){
+  .intro-section{padding:12px 0 10px!important}
+  .health-intro-banner{min-height:82px;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;column-gap:10px;row-gap:2px;padding:12px 13px;text-align:left}
+  .health-intro-banner .intro-main{font-size:17px;line-height:1.28}
+  .health-intro-banner .intro-sub{font-size:13px;line-height:1.35}
+  .health-intro-banner b{grid-column:2;grid-row:1/3;align-self:center;font-size:12px;padding:9px 8px;max-width:82px;white-space:normal;text-align:center;line-height:1.25}
+  .info-banner-copy em{background:transparent!important;color:#f4d37a!important}
+}
+
+/* FINAL V4: edge-to-edge hero treatment and full-image sticky rail */
+.visual-fill-card{isolation:isolate;background:#111!important}
+.visual-fill-card::before{content:"";position:absolute;inset:0;background-image:var(--hero-bg);background-size:cover;background-position:center;filter:blur(14px) brightness(.72);transform:scale(1.08);z-index:0}
+.visual-fill-card>img{position:relative;z-index:1;background:transparent!important;object-fit:contain!important;width:100%!important;height:430px!important}
+.visual-fill-card .visual-overlay{z-index:2}
+.kwangdong-card>img{object-position:center!important}
+.deobokryeok-card>img{object-fit:cover!important;object-position:center 35%!important}
+@media(max-width:760px){.visual-fill-card>img{height:355px!important}}
+
+@media(min-width:901px){
+  .sticky-rail{width:285px!important}
+  .rail-full-card{position:relative;isolation:isolate;display:block;height:300px;padding:0!important;overflow:hidden;border-radius:18px!important;background:#111!important;color:#fff!important;box-shadow:0 12px 28px rgba(22,45,34,.22)}
+  .rail-full-card::before{content:"";position:absolute;inset:0;background-image:var(--rail-bg);background-size:cover;background-position:center;filter:blur(12px) brightness(.58);transform:scale(1.08);z-index:0}
+  .rail-full-card>img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:transparent}
+  .rail-full-card.rent>img{object-fit:cover;object-position:center 35%}
+  .rail-full-overlay{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:54px 16px 15px;background:linear-gradient(to top,rgba(0,0,0,.94) 0%,rgba(0,0,0,.66) 60%,rgba(0,0,0,0) 100%)}
+  .rail-full-overlay span,.rail-full-overlay strong,.rail-full-overlay em,.rail-full-overlay b{display:block}
+  .rail-full-overlay span{font-size:14px;font-weight:900;color:#f4d37a}
+  .rail-full-overlay strong{font-size:23px;margin:2px 0 4px;color:#fff}
+  .rail-full-overlay em{font-style:normal;font-size:13px;line-height:1.35;color:#f1f5f2;margin-bottom:10px}
+  .rail-full-overlay b{font-size:14px;text-align:center;padding:9px 10px;border-radius:9px;background:#f58220;color:#fff}
+  .rail-full-card:hover>img{transform:scale(1.02);transition:transform .25s ease}
+}
+
+
+/* FINAL V5: bright intro, concise hero copy, complete PC sticky CTA */
+.health-intro-banner{
+  background:linear-gradient(110deg,#eaf7fb,#dff3fa)!important;
+  border:1px solid #b9dfe9!important;
+  color:#123b5d!important;
+  box-shadow:0 8px 20px rgba(36,117,138,.12)!important;
+}
+.health-intro-banner .intro-main{color:#123b5d!important}
+.health-intro-banner .intro-sub{color:#24758a!important}
+.health-intro-banner b{background:#f4d37a!important;color:#332400!important}
+.health-intro-banner:hover b{background:#ffd95f!important}
+.visual-overlay-compact{
+  justify-content:flex-end!important;
+  padding:20px 26px 24px!important;
+  background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.22) 52%,rgba(0,0,0,0) 74%)!important;
+}
+.visual-overlay-compact .hero-badge{align-self:flex-start;margin-bottom:12px!important}
+.visual-overlay-compact .cpa-btn{width:100%;margin:0!important}
+.kwangdong-card>img.hero-kwangdong{object-fit:cover!important;object-position:center!important;background:#2e1609!important}
+@media(min-width:901px){
+  .rail-full-card{height:320px!important}
+  .rail-full-card>img{object-fit:cover!important;object-position:center!important}
+  .rail-full-overlay{padding:58px 16px 14px!important}
+  .rail-full-overlay strong{font-size:21px!important;margin:0 0 3px!important}
+  .rail-full-overlay span{font-size:14px!important;color:#f4d37a!important;margin-bottom:3px!important}
+  .rail-full-overlay em{font-size:13px!important;line-height:1.35!important;margin-bottom:9px!important}
+  .rail-full-overlay b{display:block!important;background:#f58220!important;color:#fff!important;padding:9px 10px!important;border-radius:9px!important;text-align:center!important}
+}
+@media(max-width:760px){
+  .visual-overlay-compact{padding:17px 18px 20px!important}
+}
