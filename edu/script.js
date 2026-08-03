@@ -1,0 +1,1 @@
+const b=document.getElementById('mobileFixed');const x=document.getElementById('closeFixed');if(sessionStorage.getItem('eduFixedClosed')==='1')b.style.display='none';x?.addEventListener('click',()=>{b.style.display='none';sessionStorage.setItem('eduFixedClosed','1')});
