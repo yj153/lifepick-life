@@ -1,0 +1,1 @@
+(function(){const bar=document.getElementById('mobileBar');const btn=document.querySelector('.mobile-close');if(!bar||!btn)return;if(sessionStorage.getItem('dbathBarClosed')==='1')bar.style.display='none';btn.addEventListener('click',()=>{bar.style.display='none';sessionStorage.setItem('dbathBarClosed','1')});})();
