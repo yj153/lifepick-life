@@ -121,3 +121,10 @@ body{
 .edu-intro-banner:focus-visible{outline:3px solid #ffd65a;outline-offset:3px}
 @media(max-width:900px){.edu-intro-banner b{font-size:13px}}
 @media(max-width:480px){.edu-intro-banner b{font-size:12px}}
+
+
+/* FINAL V7: certificate first, OnlyOne second */
+.hero-cta.onlyone{background:#653a92!important}
+.sticky-visual.onlyone .sticky-overlay{background:linear-gradient(180deg,transparent,rgba(69,31,95,.95))}
+.mobile-fixed a:first-of-type{background:#75449a!important}
+.mobile-fixed a:last-of-type{background:#51307e!important}
