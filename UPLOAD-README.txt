@@ -4,8 +4,8 @@ lifepick-life 저장소 루트 전체 업로드용입니다.
 
 포함:
 - nns/ : 넥센타이어 네이버용 랜딩
-- UPLOAD-README.txt : 업로드 안내
-- CHECKLIST.txt : 업로드 전 확인
+- UPLOAD-README.txt
+- CHECKLIST.txt
 
 중요:
 - 루트 index.html 없음
