@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://cadllwwn.adpt.kr/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넥센타이어 렌탈 상담 신청서</title>
+
+	<link rel="stylesheet" href="./넥센타이어 렌탈 상담 신청서_files/event19.css">
+	
+	<script src="./넥센타이어 렌탈 상담 신청서_files/jquery-latest.min.js.다운로드"></script>
+    <!-- //<script  src="js/jquery-latest.min.js"></script>-->
+
+        <script language="javascript" type="text/javascript" src="./넥센타이어 렌탈 상담 신청서_files/Common.js.다운로드"></script>
+        <script language="javascript" type="text/javascript">
+            var iCnt = 0;
+    
+        function fn_multi_submit(ArgP) {
+    
+                  $("input[name=name]").val( $("input[name="+ArgP+"_name]").val() );
+                  $("input[name=mobile1]").val( $("select[name="+ArgP+"_mobile1] option:selected").val() );
+                  $("input[name=mobile2]").val( $("input[name="+ArgP+"_mobile2]").val() );
+                  $("input[name=mobile3]").val( $("input[name="+ArgP+"_mobile3]").val() );
+                  $("input[name=opt1]").val( $("input[name="+ArgP+"_opt1]").val() ); // 차종
+                  //$("input[name=opt2]").val( $("select[name="+ArgP+"_opt2] option:selected").val() );
+                  
+                  //$("input[name=opt2]").val( $("input:checkbox[name="+ArgP+"_opt2]:checked").val() ); // 전화상담
+                  //$("input[name=opt6]").val( $("input:radio[name="+ArgP+"_opt6]:checked").val() ); // 교체시기
+				  
+				  
+				  //$("input[name=opt4]").val( $("input[name="+ArgP+"_opt4]").val() ); //나이
+				  //$("input[name=opt5]").val( $("input[name="+ArgP+"_opt5]").val() ); //지역
+                
+                    fnSubmit(ArgP);
+    
+    
+            }
+    
+            function fnSubmit(ArgP) {
+                var f = document.forms["form1"];
+    
+                /*
+				var ck_n = ""
+                if( $("input:checkbox[name="+ArgP+"_q1]:checked").val() != "y"){
+					ck_n += "1";
+                    //alert("1번째 질문에 '네' 를 선택하셔야 진행됩니다!");$("input:checkbox[name="+ArgP+"_q1]")[0].focus();return;
+                }
+				if( $("input:checkbox[name="+ArgP+"_q2]:checked").val() != "y"){
+					if( ck_n != ""){ ck_n += ","; };ck_n += "2";
+                    //alert("2번째 질문에 '네' 를 선택하셔야 진행됩니다!");$("input:checkbox[name="+ArgP+"_q2]")[0].focus();return;
+                }
+				if( $("input:checkbox[name="+ArgP+"_q3]:checked").val() != "y"){
+					if( ck_n != ""){ ck_n += ","; };ck_n += "3";
+                    //alert("3번째 질문에 '네' 를 선택하셔야 진행됩니다!");$("input:checkbox[name="+ArgP+"_q3]")[0].focus();return;
+                }
+				if( $("input:checkbox[name="+ArgP+"_q4]:checked").val() != "y"){
+					if( ck_n != ""){ ck_n += ","; };ck_n += "4";
+                    //alert("4번째 질문에 '네' 를 선택하셔야 진행됩니다!");$("input:checkbox[name="+ArgP+"_q4]")[0].focus();return;
+                }
+				if( $("input:checkbox[name="+ArgP+"_q5]:checked").val() != "y"){
+					if( ck_n != ""){ ck_n += ","; };ck_n += "5";
+                    //alert("5번째 질문에 '네' 를 선택하셔야 진행됩니다!");$("input:checkbox[name="+ArgP+"_q5]")[0].focus();return;
+                }
+				if( $("input:checkbox[name="+ArgP+"_q6]:checked").val() != "y"){
+					if( ck_n != ""){ ck_n += ","; };ck_n += "6";
+                    //alert("6번째 질문에 '네' 를 선택하셔야 진행됩니다!");$("input:checkbox[name="+ArgP+"_q6]")[0].focus();return;
+                }
+				
+				if( ck_n != ""){
+					alert(ck_n+"번째 질문에 '네' 를 선택하셔야 진행됩니다!");
+					$('html, body').animate({scrollTop : ($(".check_box").offset().top-70) }, 400);
+					return;
+				}
+				*/
+				
+				
+                
+                if (!f.agree1.checked) {
+                    alert("광고성 정보 수신에 동의하셔야 참여가능합니다!");
+                    f.agree1.focus();
+                }
+                else if (!f.agree2.checked) {
+                    alert("개인정보수집에 동의하셔야 참여가능합니다!");
+                    f.agree2.focus();
+                }
+                else if (!f.agree3.checked) {
+                    alert("개인정보취급위탁에 동의하셔야 참여가능합니다!");
+                    f.agree3.focus();
+                }
+                else if (f.name.value.replace(/ /g, "") == "") {
+                    alert("이름을 입력해주세요!");
+                    $("input[name="+ArgP+"_name]").focus();
+                }
+				else if (f.mobile2.value.replace(/ /g, "") == "") {
+					alert("연락처를 입력해주세요!");
+					$("input[name="+ArgP+"_mobile2]").focus();
+				}
+				else if (f.mobile2.value.replace(/ /g, "").length != 4) {
+					alert("연락처를 정확히 입력해주세요!");
+					$("input[name="+ArgP+"_mobile2]").focus();
+				}
+				else if (!isNum(f.mobile2.value)) {
+					alert("연락처를 숫자로 입력해주세요!");
+					$("input[name="+ArgP+"_mobile2]").focus();
+				}
+				else if (f.mobile3.value.replace(/ /g, "") == "") {
+					alert("연락처를 입력해주세요!");
+					$("input[name="+ArgP+"_mobile3]").focus();
+				}
+				else if (f.mobile3.value.replace(/ /g, "").length != 4) {
+					alert("연락처를 정확히 입력해주세요!");
+					$("input[name="+ArgP+"_mobile3]").focus();
+				}else if (!isNum(f.mobile3.value)) {
+                    alert("연락처를 숫자로 입력해주세요!");
+                    $("input[name="+ArgP+"_mobile3]").focus();
+                }else if (f.opt1.value.replace(/ /g, "") == "") {
+                    alert("차종을 입력해주세요!");
+                    $("input[name="+ArgP+"_opt1]").focus();
+                }/*
+				else if (f.opt6.value.replace(/ /g, "") == "") {
+                    alert("마지막 타이어 교체시기를 선택해주세요!");
+                    $("input[name="+ArgP+"_opt6]").focus();
+                }
+                else if (f.opt2.value.replace(/ /g, "") != "y") {
+                    alert("전화상담을 통한 혜택 안내 동의 하셔야 참여 가능합니다!");
+                }*/else {
+                    
+    
+                
+                        iCnt++;
+                        if (iCnt == 1) __doPostBack("lbSubmit", "");
+                }
+            }
+    
+    
+    
+            function fnPopup(url, width, height) {
+                var pop = window.open(url, '_blank', ' menubar=no, toolbar=no,location=no,status=no,directory=no,border=no,scrollbars=yes,resizable=no,width=' + width + ',height=' + height);
+                pop.focus();
+            }
+    
+    
+    
+            
+           function ufnMove1(){
+                var offset = $("#form_location").offset();
+               //console.log((offset.top - 250));
+                $('html, body').animate({scrollTop : (offset.top-70) }, 400);
+            }
+            
+    // checkbox 한개만 선택가능하도록 
+    $(function(){
+        
+        $('.opt_only1').click(function(){
+            var obj_name = $(this).attr("name");
+          if($(this).prop('checked')){
+             $('input[type="checkbox"][name="'+obj_name+'"]').prop('checked',false);
+             $(this).prop('checked',true);
+            }
+           });
+    
+    
+        $('input[type="checkbox"][name="p1_opt2"],input[type="checkbox"][name="p2_opt2"]').click(function(){
+            var obj_name = $(this).attr("name");
+          if($(this).prop('checked')){
+             $('input[type="checkbox"][name="'+obj_name+'"]').prop('checked',false);
+             $(this).prop('checked',true);
+            }
+           });
+           
+    });
+    
+    </script>
+<script>
+    $(document).ready(function() {
+    successMsg = "";
+    adpotResultPage = "/landing/25/nexen/result.html";
+    });
+</script>		
+<script src="./넥센타이어 렌탈 상담 신청서_files/save.js.다운로드"></script>
+<script>
+function checkOnSubmit() {
+	if ( !$("input[name=agree1]:checked").prop("checked") ) {
+			alert("광고성 정보 수신에 동의해 주세요!");
+			return false;
+	}
+	if ( !$("input[name=agree2]:checked").prop("checked") ) {
+			alert("개인정보수집 이용에 동의해 주세요!");
+			return false;
+	}
+	if ( !$("input[name=agree3]:checked").prop("checked") ) {
+			alert("개인정보 취급위탁에 동의해 주세요!");
+			return false;
+	}
+	return onSubmit();
+}
+</script>
+    <style>
+  .imageye-selected {
+    outline: 2px solid black !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+  }
+</style></head>
+    
+    <body>
+<form method="post" id="joinForm" name="joinForm" onsubmit="return checkOnSubmit()">
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+	<script language="javascript" type="text/javascript" src="./넥센타이어 렌탈 상담 신청서_files/script.js.다운로드"></script>
+<style>
+
+	/* 체크박스 css S */
+	input::placeholder {color:#a0a0a0 !important;}
+	textarea::placeholder {color:#a0a0a0 !important;}
+
+	input {color:#000000 !important;border-style:solid;border-color:#000000 !important;border-width:1px !important;}
+	textarea{color:#000000 !important;border-style:solid;border-color:#000000 !important;border-width:1px !important;}
+	select{color:#000000 !important;border-style:solid;border-color:#000000 !important;border-width:1px !important;}
+
+	.Radio_Button_N input[type="radio"] + label{
+		border:1px solid #000000;
+				background-color: #fff;
+		color: #a0a0a0;
+	}
+	.Radio_Button_N input[type="radio"]:checked + label{
+		background-color: #000000;
+		color: #fff;
+	}
+
+
+	.checks_15 input[type="checkbox"]{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+	.checks_15 input[type="checkbox"] + label{ display:inline-block; position:relative; padding:3px 0 0 26px; cursor:pointer;font-size:15px;}
+	.checks_15 input[type="checkbox"] + label:before{ content:''; position:absolute; left:0; top:3px; width:15px; height:15px; text-align:center; background:#fff; border:1px solid #ccc; box-sizing:border-box;border-radius : 3px; }
+	.checks_15 input[type="checkbox"]:checked + label:after{ content: '\2713'; position:absolute; top:3px; left:0; width:15px; height:15px; background-color:#1562CF;color:#ffffff;text-align: center; vertical-align: middle;border-radius : 3px;font-size:12px;font-weight:bold;}
+
+
+	.radios_15 input[type="radio"]{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+	.radios_15 input[type="radio"] + label{ display:inline-block; position:relative; padding:3px 0 0 26px; cursor:pointer;font-size:15px;}
+	.radios_15 input[type="radio"] + label:before{ content:''; position:absolute; left:0; top:3px; width:15px; height:15px; text-align:center; background:#fff; border:1px solid #ccc; box-sizing:border-box;border-radius : 100%; }
+	.radios_15 input[type="radio"]:checked + label:after{ content: ''; position:absolute; top:6px; left: 3px; width:9px; height:9px; background-color:#1562CF;color:#ffffff;text-align: center; vertical-align: middle;border-radius : 100%; }
+
+	
+	.checks_20 input[type="checkbox"]{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+	.checks_20 input[type="checkbox"] + label{ display:inline-block; position:relative; padding:3px 0 0 26px; cursor:pointer;font-size:15px;}
+	.checks_20 input[type="checkbox"] + label:before{ content:''; position:absolute; left:0; top:3px; width:15px; height:15px; text-align:center; background:#fff; border:1px solid #888888; box-sizing:border-box;border-radius : 3px; }
+	.checks_20 input[type="checkbox"]:checked + label:after{ content: '\2713'; position:absolute; top:3px; left:0; width:15px; height:15px; background-color:#1562CF;color:#ffffff;text-align: center; vertical-align: middle;border-radius : 3px;font-size:12px;font-weight:bold;}
+
+
+	/*체크박스 css E */
+
+</style>
+
+
+<style>
+	#fixed_bar { position:fixed; display:block; top:0; width:100%; height:80px; background:#7b25fd; text-align:center; z-index:99; }
+	#fixed_bar:hover { background:#000; }
+	#fixed_bar a { position:absolute; display:block; width:100%; height:80px; }
+	#fixed_bar h1 { font-size:24px; color:#fff; font-weight:bold; margin-top:14px; }
+	#fixed_bar h2 { font-size:16px; color:#fff; font-weight:700; margin-top:5px;}
+
+	@media all and (max-width:1200px) {
+		#fixed_bar { height:46px;  }
+		#fixed_bar a { height:46px; }
+		#fixed_bar h1 { font-size:14px;  margin-top:12px; }
+		#fixed_bar h2 { display:none; }
+	}
+
+      .jbFixed {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+		z-index:999;
+		margin:0 auto;
+		text-align: center;
+      }
+</style>
+
+
+
+
+
+
+ 
+    <!-- // 상단_1920 img  --->   
+       <!-- // <a href="#form_location" style="width: 100%; height: 70px; "> 
+            <div class="top blink-image blink" style="width: 100%;  position: fixed; top: 0; z-index: 99; text-align:center; 
+                background-image: url(images_event19/top_btn.gif);
+                height: 70px;
+                background-position: center;
+				background-repeat:no-repeat;
+                cursor:pointer;">
+            </div>
+        </a>-->
+    <!-- // 상단_1920 img  --->   
+    
+    <!-- //<div class="main_htag">
+        <h1>넥센타이어 렌탈 상담 신청서</h1>
+        <h2>넥센타이어 렌탈 상담 신청서</h2>
+        <h2></h2>
+    </div>
+    
+        <div class="Layer_Top_Follow_Box" id="Top_lay_follow_box">
+            <div class="Layer_Top_Follow_Length">
+    
+                <div class="Landing_Title_Box">넥센타이어 렌탈 상담 신청서</div>
+                <div class="Landing_Button_Box bg_color_box1"><a href="#form_location" onclick="ufnMove1();">상담받고 혜택받기</a></div>
+    
+            </div>
+        </div>-->
+    
+       <!-- // <div style="height:57px;"></div>-->
+    <div class="wrap  Q_W_Size_800px" id="Body_area">
+    <div class="pd-top-10">
+	<a><img width="100%" src="./넥센타이어 렌탈 상담 신청서_files/main_01.gif" style="vertical-align:bottom;display:block;" title="넥센타이어 렌탈 상담 신청서"></a>
+	<a><img width="100%" src="./넥센타이어 렌탈 상담 신청서_files/main_02.gif" style="vertical-align:bottom;display:block;" title="넥센타이어 렌탈 상담 신청서"></a>
+	<a><img width="100%" src="./넥센타이어 렌탈 상담 신청서_files/main_03.jpg" style="vertical-align:bottom;display:block;" title="넥센타이어 렌탈 상담 신청서"></a>
+	<a><img width="100%" src="./넥센타이어 렌탈 상담 신청서_files/main_04.gif" style="vertical-align:bottom;display:block;" title="넥센타이어 렌탈 상담 신청서"></a>
+    </div>
+
+
+
+<link rel="stylesheet" href="./넥센타이어 렌탈 상담 신청서_files/diy_font.css">
+<link rel="stylesheet" href="./넥센타이어 렌탈 상담 신청서_files/diy.css">
+
+  <style>
+/*백그라운드 컬러 CSS  S*/
+.Inputform_Background_Color{
+	background-color:#ffffff;
+}
+/*라운드 컬러 CSS  S*/
+.Inputform_Round_Color{
+	border-color:#ffffff !important;
+}
+/**타이틀 이름 색상 CSS S **/
+.Title_Text_Color .Title_Name,.Input_Radio_Chcek_Text_Terms,.Input_Radio_Chcek_Text_Terms a{
+	color:#2b3953;
+}
+/*Input/select/textarea 백그라운드 컬러 CSS  S*/
+.Inputbox_Background_Color input,.Inputbox_Background_Color textarea,.Inputbox_Background_Color {
+	background-color:#fff;
+}
+
+/*Input/select/textarea 백그라운드 컬러 CSS  S*/
+.Inputbox_Background_Color input, .Inputbox_Background_Color select{
+	background-color:#efefef;
+}
+
+
+/*Input/select/textarea 백그라운드 컬러 CSS  S*/
+.Radio_DIY_Button_N input[type="radio"] + label{
+	background-color:#fff; border: 2px solid #f7f7f7;  height:55px; width: 110%;
+}
+
+
+/*주소검색 버튼 백그라운드 컬러 CSS  S*/
+.Inputbox_Button_Background_Color .Button_Address_Search{
+	background-color:#9e9e9e;
+}
+/*Input/select/textarea 라운드 컬러 CSS  S*/
+.Inputbox_Round_Color input,.Inputbox_Round_Color select,.Inputbox_Round_Color textarea,.Inputbox_Round_Color .Button_Address_Search{
+	border-color:;
+}
+
+/*Input/select/textarea 폰트컬러 CSS */
+/* 입력전 S */
+.Inputbox_Befor_Color input::placeholder,.Inputbox_Befor_Color textarea::placeholder{
+	color:#c2c2c2 !important;
+}
+/* 입력후 S */
+.Inputbox_After_Color input,.Inputbox_After_Color textarea,.Inputbox_After_Color select,.Inputbox_After_Color .Input_Radio_Chcek_Text,.Inputbox_After_Color .Input_Radio_Chcek_Text a,.Inputbox_After_Color .Left_Title_Box,.Inputbox_After_Color .Left_Title_Box_Date,.Inputbox_After_Color  .Radio_DIY_Button_N input[type="radio"] + label{
+	color:#000000 !important;
+}
+/*Input/select/textarea 폰트컬러 CSS  E*/
+/*주소검색 버튼 텍스트 컬러 CSS  S*/
+.Inputbox_Button_Color .Button_Address_Search a{
+	color:#f7f7f7;
+}
+/* 버튼 텍스트 컬러 S */
+.Submit_Text_Color .Submit_Button a{
+	color:#fafafa;
+}
+/* 버튼 배경 컬러 S */
+.Submit_Background_Color .Submit_Button{
+	background-color:#fff;
+}
+/* 버튼 배경 컬러 E */
+
+/*폼간간격*/
+.Db-Cart-block{
+	padding:0 ;
+}
+
+/* 입력폼 외부 background 컬러 S */
+.Inputform_Out_Background{
+	background-color:#ffffff;
+}
+/* 입력폼 외부 background 컬러 E */
+
+/* 입력폼 설명 컬러 S */
+.Input_explain_Text_Color .Title_explain{
+	color:#f44336 !important;
+}
+/* 입력폼 설명 컬러 E */
+
+/*문자인증 버튼 백그라운드 컬러 CSS  S*/
+.Inputbox_Button_Background_Color .Button_PNA_Search{
+	background-color:#9e9e9e;
+}
+/*Input/select/textarea 라운드 컬러 CSS  S*/
+.Inputbox_Round_Color input,.Inputbox_Round_Color select,.Inputbox_Round_Color textarea,.Inputbox_Round_Color .Button_PNA_Search,.Inputbox_Round_Color .Radio_DIY_Button_N input[type="radio"] + label{
+	border-color:#efefef !important;
+}
+
+/*문자인증 버튼 텍스트 컬러 CSS  S*/
+.Inputbox_Button_Color .Button_PNA_Search a{
+	color:#f7f7f7;
+}
+
+/*Radio 버튼 선택시 CSS  S*/
+.Radio_DIY_Button_N input[type="radio"]:checked + label{
+	background-color:#9e9e9e;
+ 	border-color:#9e9e9e !important;
+   color: #f7f7f7 !important;
+}	
+
+</style>
+
+
+
+
+<div class="check_box" style="border-radius:0px; padding:20px 20px 30px 20px; background-color:#fff;display:none;">
+
+<!-- //form-->
+	<a><img width="100%" src="./넥센타이어 렌탈 상담 신청서_files/main_05.jpg" style="vertical-align:bottom;display:block;" title="넥센타이어 렌탈 상담 신청서"></a>
+	
+<div class="check_box Round_Radius_Box">
+
+	<div class="Input_width_Size_Box_In5 From_Background_Color2 From_Round_Color8">
+
+		<!-- //form-->
+                  <ul class="check2">
+						<div style="margin:10px 5px; font-weight:500; font-size:22px;">1. 넥센타이어 렌탈 서비스 신청인걸 알고 계시나요?</div>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q1" value="y" checked_value="">네</label></li>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q1" value="n">아니오</label></li><br><br>
+
+						<div style="margin:10px 5px; font-weight:500; font-size:22px;">2. 제휴카드 사용시 월 17,000원 할인 알고 계시나요?</div>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q2" value="y" checked_value="">네</label></li>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q2" value="n">아니오</label></li><br><br>	
+				
+						<div style="margin:10px 5px; font-weight:500; font-size:22px;">3. 이벤트기간 렌탈시 타이어 장착비용이 면제되는걸 알고 계시나요?</div>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q3" value="y" checked_value="">네</label></li>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q3" value="n">아니오</label></li><br><br>
+
+						<div style="margin:10px 5px; font-weight:500; font-size:22px;">4. 월 3,000원으로 렌탈받아도 동일한 혜택을 제공받는 것을 알고 계시나요?</div>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q4" value="y" checked_value="">네</label></li>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q4" value="n">아니오</label></li><br><br>				
+                 
+						<div style="margin:10px 5px; font-weight:500; font-size:22px;">5. 최고급 4본 렌탈시 신세계상품권 3만원 증정 이벤트중인 것을 알고 계시나요?</div>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q5" value="y" checked_value="">네</label></li>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q5" value="n">아니오</label></li><br><br>
+
+						<div style="margin:10px 5px; font-weight:500; font-size:22px;">6. 해당 이벤트는 전화상담을 통한 혜택을 안내하고 있습니다.  동의하시나요?</div>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q6" value="y" checked_value=""> 네</label></li>
+							<li><label><input type="checkbox" class="opt_only1" name="p1_q6" value="n"> 아니오</label></li><br><br>			
+					
+					</ul>
+	</div>
+</div>
+</div>
+<!-- //form-->
+
+<!-- //<div style="height:10px;"></div>	-->
+
+
+
+
+
+
+
+
+<div class="wrap  Q_W_Size_800px" id="Body_area">
+	<a><img width="100%" src="./넥센타이어 렌탈 상담 신청서_files/form_top.gif" style="vertical-align:bottom;display:block;" title="넥센타이어 렌탈 상담 신청서"></a>	
+</div>
+
+
+<div class="Inputform_Out_Background" style="border-radius:0px; padding:20px 20px; background-color:#fff;">
+
+<!-- //form-->
+<div class="Input_width_Size_Box W_Size_800p Round_Radius_Box">
+<!--------------------- 입력폼 S ------------------->
+<div class="Db-Cart-container 
+Inputform_Space_5	
+Inputform_Background_Color222 
+Inputform_Round_Color222 
+Inputform_Border_1 
+Inputform_Radius_7 
+Title_Font_size_18 
+Title_Text_Color 
+Title_Text_Bold Title_Family_DIYRoboto 
+Title_Dsplay_Off Inputbox_Bottom_Space_10 
+Inputbox_Font_size_18 
+Inputbox_Befor_Color 
+Inputbox_After_Color 
+Inputbox_Border_1 
+Inputbox_Radius_5 
+Inputbox_Round_Color 
+Inputbox_Background_Color 
+Inputbox_Button_Background_Color 
+Inputbox_Button_Color 
+Inputbox_Family_DIYRoboto 
+Inputbox_Text_Bold_n Input_explain_Text_Bold Input_explain_Font_size_18 
+Input_explain_Family_DIYRoboto 
+Input_explain_Text_Color 
+Submit_Font_size_20 
+Submit_Family_DIYRoboto 
+Submit_Text_Color 
+ 
+Submit_Radius_5 
+Submit_Text_Bold " style="border:0px;"><!-- //Submit_Background_Color-->
+	<div class="Db-Cart-row Inputform_Space">
+
+	
+<a name="form_location" id="form_location"></a>
+
+
+<div class="Input_width_Size_Box W_Size_800px Round_Radius_Box" style="border-radius:15px; border:5px solid #fff;">
+
+		<a><img width="100%" src="./넥센타이어 렌탈 상담 신청서_files/main_06.gif" style="vertical-align:bottom;display:block;" title="넥센타이어 렌탈 상담 신청서"></a>
+
+	<div class="Input_width_Size_Box_In From_Background_Color1 From_Round_Color8">
+
+		<!-- //form-->
+	
+			<div class="main_global" style=" display: flex; font-size:20px;">
+					<span style="color:#ff0000; margin-top: 15px;">* &nbsp;&nbsp;  </span><span style="margin-top: 10px;">이름&nbsp;</span> 
+					<input name="name" maxlength="5" required="required" type="text" autocomplete="off" value="" class="input_style" placeholder="" onblur="if(this.value){this.style.backgroundColor=&#39;#FAFFBD&#39;;}else{this.style.backgroundColor=&#39;&#39;;}">
+					
+			</div>
+        
+
+			<div class="main_global" style=" display: flex; font-size:20px;">
+					<span style="color:#ff0000; margin-top: 15px;">* &nbsp;&nbsp;  </span><span style="margin-top: 10px;">연락처&nbsp;</span> 
+							<div class="Global_layout_three_box">
+							<select name="tel1" maxlength="3" required="required" placeholder="연락처" class="Global_layout_form_box" style="padding:5px;">
+							<option value="010">010</option>
+							</select></div>
+							<div class="Global_layout_ken_5percent"></div>
+							<div class="Global_layout_three_box">
+								<input name="tel2" maxlength="4" required="required" type="text" value="" onkeyup="Auto_focus_set(this.value,4,form1.p1_mobile3)" class="Global_layout_form_box" placeholder="" pattern="[0-9]*" inputmode="numeric" min="0" onblur="if(this.value){this.style.backgroundColor=&#39;#FAFFBD&#39;;}else{this.style.backgroundColor=&#39;&#39;;}">
+							</div>
+							<div class="Global_layout_ken_5percent"></div>
+							<div class="Global_layout_three_box">
+								<input name="tel3" maxlength="4" required="required" type="text" value="" class="Global_layout_form_box" placeholder="" onkeyup="Max_length_set(this,4);" pattern="[0-9]*" inputmode="numeric" min="0" onblur="if(this.value){this.style.backgroundColor=&#39;#FAFFBD&#39;;}else{this.style.backgroundColor=&#39;&#39;;}">
+							</div>
+							<div class="clearfix"></div>
+					</div>
+
+		
+
+			<div class="main_global" style=" display: flex; font-size:20px;">
+					
+					
+					<span style="color:#ff0000;font-size:16px;padding:10px;">
+					※ 렌탈 불가 차종: 1톤, 봉고, 포터, 트럭, 21인치 이상 타이어, 콜로라도, 벤 등등...<br>
+					※ 본 제품은 전화상담 후 진행되는 제품으로 일부차량은 불가 할 수 있습니다.
+					</span>
+					
+			</div>
+
+			<div class="main_global" style=" display: flex; font-size:20px;">
+					<span style="color:#ff0000; margin-top: 15px;">* &nbsp;&nbsp;  </span><span style="margin-top: 10px;">차종&nbsp;</span> 
+					<input name="company" maxlength="30" required="required" type="text" autocomplete="off" value="" class="input_style" placeholder="" onblur="if(this.value){this.style.backgroundColor=&#39;#FAFFBD&#39;;}else{this.style.backgroundColor=&#39;&#39;;}">
+					
+			</div>
+
+	<!-- //
+
+				<div class="main_global">
+
+					<div>
+					<input name="p1_opt1" type="text" autocomplete="off" value="" class="input_style" placeholder="차종" onblur="if(this.value){this.style.backgroundColor='#FAFFBD';}else{this.style.backgroundColor='';}" maxlength="20">
+					</div>
+					</div>
+
+
+					<div class="main_global">
+						<div>
+							<select name="p1_opt9" placeholder="교체필요 본수 " class="Global_layout_form_box" >
+							<option value="">교체필요 본수 </option>
+							<option value="2본">2본</option>
+							<option value="4본">4본</option>
+							</select>
+						</div>
+					 </div>
+
+		<div class="Db-Cart-12" style=" display: flex; font-size:19px;">
+			<td><span style="margin-top: 9px;">타이어 교체시기</span> </td>
+			<td class="Db-Cart-block">
+				<div class="Width-100p">
+					<div class="Radio_DIY_Button_N">
+					<p class="Sort_6"><input name="p1_opt6" id="p1_opt6_1" type="radio" value="2년 미만" placeholder="마지막 타이어 교체시기"><label for="p1_opt6_1">2년 미만</label></p>
+
+					<p class="Sort_6 Mg-l-2"><input name="p1_opt6" id="p1_opt6_2" type="radio" value="3년 미만" placeholder="마지막 타이어 교체시기"><label for="p1_opt6_2">3년 미만</label></p>
+
+					<p class="Sort_6 Mg-l-2"><input name="p1_opt6" id="p1_opt6_3" type="radio" value="4년 미만" placeholder="마지막 타이어 교체시기"><label for="p1_opt6_3">4년 미만</label></p>
+
+					<p class="Sort_6 Mg-l-2"><input name="p1_opt6" id="p1_opt6_4" type="radio" value="5년 미만" placeholder="마지막 타이어 교체시기"><label for="p1_opt6_4">5년 미만</label></p>
+
+					<p class="Sort_6 Mg-l-2"><input name="p1_opt6" id="p1_opt6_5" type="radio" value="5년 이상" placeholder="마지막 타이어 교체시기"><label for="p1_opt6_5">5년 이상</label></p>
+
+					</div>
+				</div>
+				<input name="input_count_0" type="hidden" value="4">
+			</td>
+		</div>-->
+
+
+
+		<!-- //<div class="Db-Cart-12">
+			<div class="Db-Cart-block">
+				<p class="Title_Name">차량 명의자</p>
+				<div class="Width-100p">
+					<div class="Radio_DIY_Button_N">
+					<p class="Sort_4"><input name="p1_opt7" id="p1_opt7_1" type="radio" value="개인사업자" placeholder="차량 명의자" ><label for="p1_opt7_1">개인사업자</label></p>
+
+					<p class="Sort_4 Mg-l-2"><input name="p1_opt7" id="p1_opt7_2" type="radio" value="법인사업자" placeholder="차량 명의자" ><label for="p1_opt7_2">법인사업자</label></p>
+
+					<p class="Sort_4 Mg-l-2"><input name="p1_opt7" id="p1_opt7_3" type="radio" value="개인 자차" placeholder="차량 명의자" ><label for="p1_opt7_3">개인 자차</label></p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="Db-Cart-12">
+			<div class="Db-Cart-block">
+				<p class="Title_Name">차량 소유방식</p>
+				<div class="Width-100p">
+					<div class="Radio_DIY_Button_N">
+					<p class="Sort_4"><input name="p1_opt8" id="p1_opt8_1" type="radio" value="렌탈" placeholder="차량 소유방식"><label for="p1_opt8_1">렌탈</label></p>
+
+					<p class="Sort_4 Mg-l-2"><input name="p1_opt8" id="p1_opt8_2" type="radio" value="리스" placeholder="차량 소유방식"><label for="p1_opt8_2">리스</label></p>
+
+					<p class="Sort_4 Mg-l-2"><input name="p1_opt8" id="p1_opt8_3" type="radio" value="개인 자차" placeholder="차량 소유방식"><label for="p1_opt8_3">개인 자차</label></p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+			<div style="height:15px;"></div>
+
+			<div>
+					<div class="blinking-text" style="color:#ff0000;margin:10px;font-weight:bold;font-size:18px;">
+						※ 렌탈 불가 차종: 1톤, 봉고, 포터, 트럭, 21인치 이상 타이어, 콜로라도, 벤
+					</div>
+			</div>-->
+
+			<!-- //<div class="db_p"><a ><img src="images_event2_2/main_05.jpg" alt=""></a></div>-->
+
+                  <!-- //<ul class="check1">
+						<div style="margin:10px 5px; font-weight:bold; font-size:16px;">* 해당 이벤트는 전화상담을 통한 혜택을 안내하고 있습니다.  동의하시나요?</div>
+							<li><input type="checkbox" name="p1_opt2" value="y" id="p1_opt2_1"><label for="p1_opt2_1">네</label></li>
+							<li><input type="checkbox" name="p1_opt2" value="n" id="p1_opt2_2"><label for="p1_opt2_2">아니오</label></li><br><br>
+                  </ul>-->
+			<div style="height:20px;"></div>
+
+
+	</div>
+
+				<div class="db_btn"><button tyle="submit" style="background: none; border: none; cursor: pointer;"><a><img src="./넥센타이어 렌탈 상담 신청서_files/db_btn.jpg" alt=""></a></button></div>
+</div>
+<!-- //form-->
+
+<!-- //<div style="height:10px;"></div>	-->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+	<style>
+
+	/*기본 설정 시작*/
+	*{margin:0 auto; padding:0; box-sizing:border-box;}
+	nav, ul, li{list-style:none;}
+	table{border-collapse:collapse; border-spacing:0}
+	img{vertical-align:middle;}
+	select::-ms-expand{border:none; background:none;}
+	a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+	:focus{outline: none;}
+	:link, a:focus, a:hover{text-decoration:none; color:inherit;}
+	:visited, body *{color:inherit; font-family:inherit; padding:0; margin:0;}
+	body, html{width:100%; height:100%; -webkit-overflow-scrolling:touch; font-family:'Noto Sans KR', sans-serif; font-size:16px; line-height:+1.4;  word-break:keep-all; letter-spacing:-0.4px; font-weight:400;}
+	h1, h2, h3, h4, h5, h6{text-shadow:none; font-weight:normal; line-height:+1.2;}
+	.clear{clear:both;}
+	.clearfix{clear:both;}
+	input:required {outline : 0;}
+	select:required {outline : 0;}
+	/*기본 설정 끝*/
+	
+	
+	/*footer*/
+	.mainf_t3{height:70px;}
+	@media screen and (max-width: 560px){
+		.mainf_t3{height:100px;}
+	}
+	@media screen and (max-width: 480px){
+		.mainf_t3{height:120px;}
+	}
+	@media screen and (max-width: 300px){
+		.mainf_t3{height:170px;}
+	}
+	
+	@media screen and (max-width: 250px){
+		.mainf_t3{height:200px;}
+	}
+	/*footer -개인정보처리방침 새창*/
+	.ma_contbox{display:none; position:fixed; top:15%; margin:0 auto; font-weight:300; width:650px; height:600px; box-sizing:border-box;  z-index:999; background:#fff; overflow-y:scroll; border:10px solid #33cc00; text-align:left;}
+	.ma_contbox h3{font-size:20px; margin:50px 30px 10px; font-weight:500; color:#000}
+	.ma_contbox p{margin:20px 30px 0px 30px; color:#888888; line-height:21px; font-size:14px; color:#3a3a3a; font-weight:400; text-align:justify;}
+	.ma_popoff{ background:#252525; position:absolute; right:0; top:0; padding:15px; font-size:15px; font-weight:bolder; text-align:center; color:#fff;}
+	.ma_contbox dl{padding:20px 20px;}
+	.ma_contbox dl dt{color:#000; font-weight:bold; padding:8px 15px;font-size:15px; background:#f0f0f0; font-weight:500;}
+	.ma_contbox dl dd{font-size:13px; color:#515151; line-height:21px; padding:13px 15px 15px; font-weight:400; text-align:justify;}
+	
+	@media screen and (max-width: 650px){
+	.ma_contbox{width:100%;}
+	}
+	
+	
+	.footer_wrap{
+		width: 800px;
+		height: auto;
+		font-size:16px; 
+		/*float: left;*/
+		margin:0 auto; 
+		}
+	
+	
+	 /* 기본 체크박스 감춤 */
+	.footer_checkbox1{	display: none;}
+	/* off */
+	.footer_checkbox1+label{ background-repeat: no-repeat; background-image: url('./images_event1_1/footer_checkbox_off.png'); /*off 이미지*/}
+	/* on */
+	.footer_checkbox1:checked+label{ background-repeat: no-repeat; background-image: url('./images_event1_1/footer_checkbox_on.png'); /*on 이미지*/}
+	.footer_checkbox1+label{ display: inline-block; vertical-align: bottom; width:50px; height:50px;  zoom:50%;  }
+	
+		
+	</style>
+	   <script>
+		$(function(){
+		   /* footer_보기*/
+			$("#footer_agr_btn1, #footer_agr_btn2, #footer_agr_btn3").click(function(){
+				var ArgId = $(this).attr("id");
+				var ArgBox = ArgId.replace("btn","box");
+				//$(".footer_agr_box1").toggle();
+				$("#"+ArgBox).slideToggle();
+			});
+			   /* footer_보기*/
+		});
+   </script>
+	
+		<div style="width:100%; margin:0 auto; ">
+		
+			<div style="width:800px; margin:0 auto;background-color:#ececec; ">
+				<!---- footer START  ----->
+				<div class="mainf footer_wrap" style="background-color:#ececec;">
+					<div style="width:68%; height:auto; float:left; font-size:14px; text-align:left; padding:5px; margin:10px 0px 0px 25px; color:#595959;">
+						본 프로모션은 넥센타이어의 대행사인 보성컴퍼니에서 시행합니다.<br>
+						관계법령에 의거 본 이벤트에 참여하신 고객님의 개인정보는<br>
+						 넥센타이어에서 발송하는 경품 및 상품안내(TM, 이메일 등)의 마케팅에 활용되어집니다.<br>
+					</div>
+					<div style="width:22%; height:70px; float:left; display:flex; justify-content:center; align-items:center; margin-top:5px; margin-left:40px;">
+						<div style="width:80%; height:45px; display:flex; justify-content:center; align-items:center; border:2px solid #939393; border-radius:10px; background-color:#fff; color:#fff;cursor:pointer;" onclick="fnPopup(&#39;https://bsevent.co.kr/Event2024/A140/popup.htm&#39;, 517, 450);"><a href2="javascript:" class="ma_popon" style="font-size:12px; font-weight:bold; color:#000; text-align:center; line-height:16px; margin-top:-1px; letter-spacing:0.02em; display:inline-block;">개인정보/광고동의 <br>취급방침</a></div>
+					</div>
+	
+					<div class="clear"></div>
+					
+	
+					<div style="width:32%; height:auto; float:left; text-align:left; padding:2px; font-size:14px;  margin-left:20px;">
+						<div style="padding:5px  0px;color:#333333; background-color:#ececec; font-size:15px;">
+							<input type="checkbox" name="agree1" value="y" id="agree1" checked="" class="opt_class_only1" style="vertical-align: middle;"><label for="agree1">&nbsp;광고성 정보 수신에 관한 동의&nbsp;</label>
+						
+							<!-- //<img src="images1_1/footer_b.jpg"  img_src="off"  class="footer_agr_button" id="footer_agr_btn1" style="cursor:pointer;    vertical-align: top;">-->
+							
+							<span style="font-size:13px;color:#000;font-weight:bold;cursor:pointer;" class="footer_agr_button" id="footer_agr_btn1">[보기]</span>
+							
+							<!-- //<span style="float:right; margin-right:120px;"><input type="checkbox" name="agree0" class="ios" checked></span>-->
+						</div>
+						<div style="padding:5px; background-color:#ececec; display:none;" class="footer_agr_box1" id="footer_agr_box1">
+							- 광고정보의 수집주체 : 넥센타이어 <br>
+							- 광고수집 및 이용목적 : 전화, SMS, 이메일을 통한 상품안내<br>
+							- 광고정보의 항목 : 성명, 연락처, 이메일, 설문내용, ip address<br>
+							- 보유 및 이용기간 : 수집 동의일로부터 1년<br>
+						</div>
+	
+					</div>
+					
+					<div style="width:32%; height:auto; float:left;  text-align:left; padding:2px; font-size:14px;">
+						<div style="padding:5px 0px;color:#333333; background-color:#ececec7; font-size:15px;">
+						<input type="checkbox" name="agree2" value="y" id="agree2" checked="" class="opt_class_only1" style="vertical-align: middle;"><label for="agree2">&nbsp;개인정보수집 이용에 대한 동의&nbsp;</label>
+
+							<span style="font-size:13px;color:#000;font-weight:bold;cursor:pointer;" class="footer_agr_button" id="footer_agr_btn2">[보기]</span>
+							
+						</div>
+						<div style="padding:5px; background-color:#ececec;display:none;" class="footer_agr_box1" id="footer_agr_box2">
+							- 개인정보의 수집자와 개인정보3자 제공 : 보성컴퍼니<br>
+							- 수집 및 이용목적 : 전화, SMS, 이메일을 통한 상품안내<br>
+							- 개인정보의 항목 : 성명, 연락처, 이메일, 설문내용, ip address<br>
+							- 보유 및 이용기간 : 수집 동의일로부터 1년<br>
+						</div>
+					</div>
+					
+					
+					
+					<div style="width:31%; height:auto; float:left;  text-align:left; padding:2px; font-size:14px;">
+						<div style="padding:5px 0px;color:#333333; background-color:#ececec7; font-size:15px;">
+						<input type="checkbox" name="agree3" value="y" id="agree3" checked="" class="opt_class_only1" style="vertical-align: middle;"><label for="agree3">&nbsp;개인정보 취급위탁에 대한 동의&nbsp;</label>
+
+							<span style="font-size:13px;color:#000;font-weight:bold;cursor:pointer;" class="footer_agr_button" id="footer_agr_btn3">[보기]</span>
+							
+						</div>
+						<div style="padding:5px; background-color:#ececec;display:none;" class="footer_agr_box1" id="footer_agr_box3">
+								- 개인정보 취급을 위탁 한 자 : 넥센타이어 <br>
+								- 위탁 업무내용 : 광고를 통한 개인정보 취급 및 보관<br>
+								- 개인정보 보유기간 : 수집 동의일로부터 1년<br><br>
+							
+								- 개인정보 취급을 위탁 받는자 : 보성컴퍼니<br>
+								- 위탁 업무내용 : 고객 상담 신청 접수 및 접수 정보 전달<br>
+								- 개인정보 보유기간 : 수집 동의일로부터 1년<br>
+						</div>
+					</div>
+	
+	
+
+	
+					<div class="clear"></div>
+	
+					<div style="font-size:12px;text-align:center; padding:8px 0px 14px 0px;  color:#595959;">
+						귀하는 상기 동의를 거부할 권리가 있습니다.&nbsp;&nbsp; 단, 동의하지 않으실 경우는 관련 상품, 서비스 소개 및 판매에 대한 상담 신청이 불가함을 알려드립니다.
+					</div>
+	
+	
+				</div><!---- footer END  ----->
+		
+		</div>	
+	</div>	
+    </form>
+
+
+
+<script language="javascript">
+    function fnSubmit_nice(){
+		//document.form1.action = "https://nice.checkplus.co.kr/CheckPlusSafeModel/service.cb";
+		//document.form1.action = "https://nice.checkplus.co.kr/CheckPlusSafeModel/checkplus.cb";
+		//document.form1.method="get";
+        //document.form1.submit();
+		$("#u_token_version_id").val($("#token_version_id2").val());
+		$("#u_enc_data").val($("#enc_data2").val());
+		$("#u_integrity_value").val($("#integrity_value2").val());
+		$("#u_mobile").val( $("select[name=mobile1] option:selected").val() +''+ $("input[name=mobile2]").val() +''+ $("input[name=mobile3]").val() );
+
+		window.open("", "auth_popup", "width=430,height=640,scrollbar=yes");
+		var s_form = document.s_form;
+		//s_form.action = "https://nice.checkplus.co.kr/CheckPlusSafeModel/service.cb";
+		s_form.action = "/Event2024/A140/nice/n_check.aspx";
+		s_form.target = "auth_popup";
+		s_form.submit();
+
+    }
+</script>
+<!-- //<a href="javascript:fnSubmit_nice();" style="color:#000"> CheckPlus 안심본인인증 Click</a>-->
+<form name="s_form" method="get">
+	<input type="hidden" id="m" name="m" value="service">
+    <input type="hidden" id="u_mobile" name="u_mobile">
+    <input type="hidden" id="u_token_version_id" name="token_version_id">
+    <input type="hidden" id="u_enc_data" name="enc_data">
+    <input type="hidden" id="u_integrity_value" name="integrity_value">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<iframe id="itemscout-extension-gtag" src="./넥센타이어 렌탈 상담 신청서_files/saved_resource.html" scrolling="no" style="
+      width: 1px;
+      height: 1px;
+      border: none;
+      margin: 0;
+      position: absolute;
+      top:0;
+      left:0;
+    "></iframe><div id="its-image-search-container"></div><div id="its-image-crop-container"></div>
+<!-- HUB153 NAVER FOOTER START -->
+<div class="hub153-footer" style="width:100%; background:#f4f5f7; border-top:1px solid #d9dde3; box-sizing:border-box;">
+  <div style="width:100%; max-width:800px; margin:0 auto; padding:20px 14px 22px; box-sizing:border-box; text-align:center; font-size:13px; line-height:1.8; color:#4f5560;">
+    <div>
+      업체명 : 주식회사 허브153<br>
+      사업자등록번호 : 744-86-01480<br>
+      사업장 주소 : 서울특별시 강남구 도곡로112, 2층B2-4호<br>
+      이메일 : mil7bil@gmail.com
+    </div>
+    <div style="margin-top:10px;">
+      <a href="./privacy/" style="color:#4f5560; text-decoration:underline;">개인정보처리방침</a>
+      <span style="color:#a0a6ae;"> | </span>
+      <a href="./terms/" style="color:#4f5560; text-decoration:underline;">이용안내</a>
+    </div>
+  </div>
+</div>
+<!-- HUB153 NAVER FOOTER END -->
+
+</body></html>

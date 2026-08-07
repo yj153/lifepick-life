@@ -1,0 +1,293 @@
+﻿function mouseOver(obj)
+{
+    obj.style.backgroundColor = "#ffffcc";
+}
+
+function mouseOut(obj)
+{
+    obj.style.backgroundColor = "#ffffff";
+}
+
+/** 
+* 입력값이 알파벳소문자,숫자로 되어있는지 체크 
+*/ 
+function isAlphaNum(input) { 
+    var chars = "abcdefghijklmnopqrstuvwxyz0123456789"; 
+    return containsCharsOnly(input,chars);
+}
+
+/** 
+* 입력값이 알파벳소문자,숫자로 되어있는지 체크 
+*/ 
+function isUAlphaNum(input) { 
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"; 
+    return containsCharsOnly(input,chars);
+}
+
+/** 
+* 입력값이 알파벳소문자로 되어있는지 체크 
+*/ 
+function isUAlpha(input) { 
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
+    return containsCharsOnly(input,chars);
+}
+
+/** 
+* 입력값이 숫자로 되어있는지 체크 
+*/ 
+function isNum(input) { 
+    var chars = "0123456789"; 
+    return containsCharsOnly(input,chars);
+}  
+
+/** 
+* 입력값에 특정 문자(chars)가 있는지 체크 
+* 특정 문자를 허용하지 않으려 할 때 사용 
+*/ 
+function containsChars(input,chars) { 
+    for (var inx = 0; inx < input.length; inx++) { 
+       if (chars.indexOf(input.charAt(inx)) != -1) 
+           return true; 
+    } 
+    return false; 
+} 
+
+/** 
+* 입력값이 특정 문자(chars)만으로 되어있는지 체크 
+* 특정 문자만 허용하려 할 때 사용
+*/ 
+function containsCharsOnly(input,chars) { 
+    for (var inx = 0; inx < input.length; inx++) {
+       if (chars.indexOf(input.charAt(inx)) == -1)
+           return false; 
+    } 
+    return true;
+}
+
+/** 
+* 입력값이 이메일 형식인지 체크 
+*/ 
+function isValidEmail(input) {
+    var format = /^((\w|[\-\.])+)@((\w|[\-\.])+)\.([A-Za-z]+)$/; 
+    return isValidFormat(input,format); 
+}
+
+/** 
+* 입력값이 전화번호 형식(숫자-숫자-숫자)인지 체크 
+*/ 
+function isValidPhone(input) { 
+    var format = /^(\d+)-(\d+)-(\d+)$/; 
+    return isValidFormat(input,format); 
+} 
+function isValidPhoneNumber(input) { 
+    var format = /^(\d+)$/; 
+    return isValidFormat(input,format); 
+}
+
+/** 
+* 입력값이 사용자가 정의한 포맷 형식인지 체크 
+*/ 
+function isValidFormat(input,format) { 
+    if (input.search(format) != -1) { 
+        return true; 
+    } 
+    return false; 
+} 
+
+
+function fnSsnCheck(ssn)
+{
+	if(ssn == "7002271786193") return 'NO'; 
+	 var ssnStr = ssn.toString();
+	 a = ssnStr.substring(0, 1);
+	 b = ssnStr.substring(1, 2);
+	 c = ssnStr.substring(2, 3);
+	 d = ssnStr.substring(3, 4);
+	 e = ssnStr.substring(4, 5);
+	 f = ssnStr.substring(5, 6);
+	 g = ssnStr.substring(6, 7);
+	 h = ssnStr.substring(7, 8);
+	 i = ssnStr.substring(8, 9);
+	 j = ssnStr.substring(9, 10);
+	 k = ssnStr.substring(10, 11);
+	 l = ssnStr.substring(11, 12);
+	 m = ssnStr.substring(12, 13);
+	 month = ssnStr.substring(2,4);
+	 day = ssnStr.substring(4,6);
+
+	 if(month <= 0 || month > 12) return 'N';
+	 if(day <= 0 || day > 31) return 'N';
+
+	 if(g > 4 || g == 0) return 'N';
+
+	 temp=a*2+b*3+c*4+d*5+e*6+f*7+g*8+h*9+i*2+j*3+k*4+l*5;
+	 temp=temp%11;
+	 temp=11-temp;
+	 temp=temp%10;
+	
+	 if(temp == m)
+		return 'Y';
+	 else
+		return 'N'; 
+}
+
+function fnPopOpen(url,name, width, height)
+{
+	var popup = window.open(url,name,'width=' + width + ', height=' + height + ', left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizeable=no, scrollbars=no, copyhistory=no');
+	popup.focus();
+}
+
+function fnEmail_chk(obj)
+{
+    if( obj.value.length > 0 )
+    {
+        var regExp = /[a-z0-9]{2,}@[a-z0-9-]{2,}\.[a-z0-9]{2,}/i;
+
+        if(regExp.test(obj.value))
+            return true;
+        else
+            return false;
+    }
+    else
+        return false;
+}
+
+function fnEmailV_chk(obj)
+{
+    if( obj.length > 0 )
+    {
+        var regExp = /[a-z0-9]{2,}@[a-z0-9-]{2,}\.[a-z0-9]{2,}/i;
+
+        if(regExp.test(obj))
+            return true;
+        else
+            return false;
+    }
+    else
+        return false;
+}
+
+//사업자 등록번호 체크
+function fnBinNo(num) { 
+    var reg = /([0-9]{3})-?([0-9]{2})-?([0-9]{5})/; 
+    if (!reg.test(num)) return false; 
+    num = RegExp.$1 + RegExp.$2 + RegExp.$3; 
+    var cVal = 0; 
+    for (var i=0; i<8; i++) { 
+        var cKeyNum = parseInt(((_tmp = i % 3) == 0) ? 1 : ( _tmp == 1 ) ? 3 : 7); 
+        cVal += (parseFloat(num.substring(i,i+1)) * cKeyNum) % 10; 
+    } 
+    var li_temp = parseFloat(num.substring(i,i+1)) * 5 + '0'; 
+    cVal += parseFloat(li_temp.substring(0,1)) + parseFloat(li_temp.substring(1,2)); 
+    return (parseInt(num.substring(9,10)) == 10-(cVal % 10)%10); 
+}
+
+//Element Tag Find Contorl
+function fnFindControlsById(tagName, type, name)
+{ 
+    var controls = new Array();
+    var tags = document.getElementsByTagName( tagName );
+    var count = 0;
+    for(var i = 0; i < tags.length ; i++) 
+    { 
+        if(tags[i].id.indexOf(name) >= 0 )
+        { 
+            if( type == null || type == "")
+            {   
+                controls[count] = tags[i];
+                count++;
+            }
+            else if( type == tags[i].type )
+            {
+                controls[count] = tags[i];
+                count++;
+            }
+        } 
+    } 
+    return controls; 
+}
+
+//체크박스 올체크/언체크
+var rtnCheckBox = true;
+function fnCheckBoxAllSelect(tagName)
+{
+    var controls = fnFindControlsById("input", "checkbox", tagName);
+    if(rtnCheckBox){
+        for(var i=0;i<controls.length;i++){
+	        controls[i].checked = true;
+	        rtnCheckBox = false;
+	    }
+	}else{
+	    for(var i=0;i<controls.length;i++){
+	        controls[i].checked = false;
+	        rtnCheckBox = true;
+	    }
+	}
+}
+
+//Comma
+function fnCommaSplit(srcNumber) 
+{ 
+    var txtNumber = '' + srcNumber; 
+
+    var rxSplit = new RegExp('([0-9])([0-9][0-9][0-9][,.])'); 
+    var arrNumber = txtNumber.split('.'); 
+    arrNumber[0] += '.'; 
+    do { 
+        arrNumber[0] = arrNumber[0].replace(rxSplit, '$1,$2'); 
+    } 
+    while (rxSplit.test(arrNumber[0])); 
+    if (arrNumber.length > 1) { 
+        return arrNumber.join(''); 
+    } 
+    else { 
+        return arrNumber[0].split('.')[0]; 
+    } 
+}
+
+function popupResize(imgUrl){
+    var popSource = "";
+    var obj = document.createElement("img");
+    obj.src=imgUrl.src;
+    obj.id = 'newImg';
+
+    var p = window.open("","","toolbar=no");
+    document.body.appendChild(obj);
+
+    setTimeout(function(){
+     popSource = "<script> window.resizeTo( "+(obj.width+8)+", "+(obj.height+30)+" )<\/script>";
+     obj.style.display = "none";
+     popSource += "<body style='margin:0000'> <img src='"+imgUrl.src+"' onclick='self.close()'>";
+     p.document.write(popSource);
+    });
+}
+
+//마우스 온오버 색상
+function mouseOver(obj)
+{
+    obj.style.backgroundColor = "#deb48c";
+}
+function mouseOut(obj)
+{
+    obj.style.backgroundColor = "#ffffff";
+}
+function mouseOutZip(obj, col)
+{
+    obj.style.backgroundColor = col;
+}
+
+		/*  oninput="maxLengthCheck(this)" */
+		function maxLengthCheck(object){
+			if (object.value.length > object.maxLength){
+				object.value = object.value.slice(0, object.maxLength);
+			}    
+		}
+
+
+function ufn_goto_move(ArgTarget,ArgTop_plus){ // ufn_goto_move('id','250');
+	var offset = $("#"+ArgTarget).offset();
+   //console.log((offset.top - 250));
+	$('html, body').animate({scrollTop : (offset.top-ArgTop_plus) }, 400);
+}
+
+

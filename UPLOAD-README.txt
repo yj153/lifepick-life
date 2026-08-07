@@ -3,7 +3,7 @@ lifepick-life 저장소 루트 전체 업로드용입니다.
 압축을 풀면 보이는 항목 전체를 GitHub lifepick-life 저장소 메인 화면에 드래그 업로드하세요.
 
 포함:
-- kns/ : 보성컴퍼니 넥센타이어 카카오용 랜딩
+- nns/ : 넥센타이어 네이버용 랜딩
 - UPLOAD-README.txt : 업로드 안내
 - CHECKLIST.txt : 업로드 전 확인
 
@@ -14,4 +14,6 @@ lifepick-life 저장소 루트 전체 업로드용입니다.
 - 기존 lifepick.life 메인 영향 없음
 
 업로드 후 확인:
-https://lifepick.life/kns/
+https://lifepick.life/nns/
+https://lifepick.life/nns/privacy/
+https://lifepick.life/nns/terms/
