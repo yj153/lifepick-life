@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'DIYNanum';
+  font-style: normal;
+  font-weight: normal;
+  src: url(/fonts/NanumGothic-Regular.eot);
+  src: url(/fonts/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(/fonts/NanumGothic-Regular.woff2) format('woff2'),
+       url(/fonts/NanumGothic-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'DIYRoboto';
+  font-style: normal;
+  font-weight: normal;
+  src: url(/fonts/Roboto-Regular.otf);
+  src: url(/fonts/Roboto-Regular.otf?#iefix) format('embedded-opentype'),
+       url(/fonts/Roboto-Regular.woff2) format('woff2'),
+       url(/fonts/Roboto-Regular.woff) format('woff'),
+	   url(/fonts/Roboto-Thin.otf) format('opentype');;
+}
+
+@font-face {
+    font-family: 'DIYNanumMgo';
+    src: url(/fonts/NanumMyeongjo.eot);
+    src: url(/fonts/NanumMyeongjo.eot?#iefix) format("embedded-opentype"), url(/fonts/NanumMyeongjo.woff) format("woff"), url(/fonts/NanumMyeongjo.ttf) format("truetype");
+}
